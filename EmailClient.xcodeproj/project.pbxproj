@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		984A1968150979B900D5867E /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984A1967150979B900D5867E /* HomePageViewController.m */; };
 		9870D49015055CBE009CEABF /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870D48F15055CBE009CEABF /* KeychainItemWrapper.m */; };
 		9887110E14FDB0A9009218F8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9887110D14FDB0A9009218F8 /* Default.png */; };
 		9887111314FDB210009218F8 /* E-mail Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9887111214FDB20F009218F8 /* E-mail Icon.png */; };
@@ -21,12 +20,13 @@
 		989EAA0C14FD7CD000333CDD /* EmailClientAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EAA0B14FD7CD000333CDD /* EmailClientAppDelegate.m */; };
 		989EAA0F14FD7CD000333CDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989EAA0D14FD7CD000333CDD /* MainStoryboard.storyboard */; };
 		989EAA1214FD7CD000333CDD /* EmailClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EAA1114FD7CD000333CDD /* EmailClientViewController.m */; };
+		98D12B87150988D500654B08 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984A1967150979B900D5867E /* HomePageViewController.m */; };
 		98DFD88015088C29000CE61D /* LogoDogOnly.png in Resources */ = {isa = PBXBuildFile; fileRef = 98DFD87F15088C29000CE61D /* LogoDogOnly.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		984A1966150979B900D5867E /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = ../HomePageViewController.h; sourceTree = "<group>"; };
-		984A1967150979B900D5867E /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = ../HomePageViewController.m; sourceTree = "<group>"; };
+		984A1967150979B900D5867E /* HomePageViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = HomePageViewController.m; path = ../HomePageViewController.m; sourceTree = "<group>"; };
 		9870D48E15055CBE009CEABF /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		9870D48F15055CBE009CEABF /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		9887110D14FDB0A9009218F8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				989EAA1214FD7CD000333CDD /* EmailClientViewController.m in Sources */,
 				9897698114FED320004D131F /* EmailClientModel.m in Sources */,
 				9870D49015055CBE009CEABF /* KeychainItemWrapper.m in Sources */,
-				984A1968150979B900D5867E /* HomePageViewController.m in Sources */,
+				98D12B87150988D500654B08 /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

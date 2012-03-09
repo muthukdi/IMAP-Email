@@ -19,13 +19,24 @@
     configDataExists = NO;
     NSLog(@"%d",configDataExists);
     NSArray *entries = [self.model retrieveDataFromMemory];
-    for (NSString *entry in entries)
+    for (NSString *item in entries)
     {
-        if ([entry isEqualToString:@""])
+        if ([item isEqualToString:@""])
             return YES;
     }
     configDataExists = YES;
+    NSLog(@"%d",configDataExists);
     return YES;
+}
+- (EmailClientModel *)model
+{
+    if (_model)
+        return _model;
+    else
+    {
+        _model = [[EmailClientModel alloc] init];
+        return _model;
+    }
 }
 
 @end
