@@ -24,7 +24,7 @@
 - (IBAction)dismissKeyboardOnEnterKey:(UITextField *)sender;
 - (IBAction)moveViewUpWhileEditing:(UITextField *)textField;
 - (IBAction)moveViewDownAfterEditing:(UITextField *)textField;
-- (IBAction)clearPressed:(UIButton *)sender;
-- (IBAction)submitPressed:(UIButton *)sender;
+- (IBAction)submitPressed:(UIBarButtonItem *)sender;
+- (IBAction)clearPressed:(UIBarButtonItem *)sender;
 
 @end

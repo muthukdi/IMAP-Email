@@ -64,7 +64,7 @@
     rectangle.origin = CGPointMake(0,20);
     self.view.frame = rectangle;
 }
-- (IBAction)clearPressed:(UIButton *)sender
+- (IBAction)clearPressed:(UIBarButtonItem *)sender
 {
     self.userName.text = @"";
     self.password.text = @"";
@@ -74,7 +74,7 @@
     self.SMTPport.text = @"";
     [self.model clearDataFromMemory];
 }
-- (IBAction)submitPressed:(UIButton *)sender
+- (IBAction)submitPressed:(UIBarButtonItem *)sender
 {
     NSArray *entries = [[NSArray alloc] initWithObjects:
                         self.userName.text,

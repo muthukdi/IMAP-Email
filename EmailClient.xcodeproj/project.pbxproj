@@ -21,6 +21,7 @@
 		989EAA0F14FD7CD000333CDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989EAA0D14FD7CD000333CDD /* MainStoryboard.storyboard */; };
 		989EAA1214FD7CD000333CDD /* EmailClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989EAA1114FD7CD000333CDD /* EmailClientViewController.m */; };
 		98D12B87150988D500654B08 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 984A1967150979B900D5867E /* HomePageViewController.m */; };
+		98D12B9315099DD100654B08 /* WriteEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D12B9215099DD100654B08 /* WriteEmailViewController.m */; };
 		98DFD88015088C29000CE61D /* LogoDogOnly.png in Resources */ = {isa = PBXBuildFile; fileRef = 98DFD87F15088C29000CE61D /* LogoDogOnly.png */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		989EAA0E14FD7CD000333CDD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		989EAA1014FD7CD000333CDD /* EmailClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailClientViewController.h; sourceTree = "<group>"; };
 		989EAA1114FD7CD000333CDD /* EmailClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailClientViewController.m; sourceTree = "<group>"; };
+		98D12B9115099DD100654B08 /* WriteEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteEmailViewController.h; sourceTree = "<group>"; };
+		98D12B9215099DD100654B08 /* WriteEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteEmailViewController.m; sourceTree = "<group>"; };
 		98DFD87F15088C29000CE61D /* LogoDogOnly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoDogOnly.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +106,8 @@
 				989EAA0A14FD7CD000333CDD /* EmailClientAppDelegate.h */,
 				989EAA0B14FD7CD000333CDD /* EmailClientAppDelegate.m */,
 				989EAA0D14FD7CD000333CDD /* MainStoryboard.storyboard */,
+				98D12B9115099DD100654B08 /* WriteEmailViewController.h */,
+				98D12B9215099DD100654B08 /* WriteEmailViewController.m */,
 				9897697F14FED320004D131F /* EmailClientModel.h */,
 				9897698014FED320004D131F /* EmailClientModel.m */,
 				984A1966150979B900D5867E /* HomePageViewController.h */,
@@ -197,6 +202,7 @@
 				9897698114FED320004D131F /* EmailClientModel.m in Sources */,
 				9870D49015055CBE009CEABF /* KeychainItemWrapper.m in Sources */,
 				98D12B87150988D500654B08 /* HomePageViewController.m in Sources */,
+				98D12B9315099DD100654B08 /* WriteEmailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
