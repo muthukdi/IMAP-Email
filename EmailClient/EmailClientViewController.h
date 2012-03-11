@@ -21,7 +21,7 @@
 @property (strong, nonatomic) EmailClientModel *model;
 
 - (void)populateFieldsWithData:(NSArray *)entries;
-- (IBAction)dismissKeyboardOnEnterKey:(UITextField *)sender;
+- (IBAction)dismissTextFieldKeyboard:(UITextField *)sender;
 - (IBAction)moveViewUpWhileEditing:(UITextField *)textField;
 - (IBAction)moveViewDownAfterEditing:(UITextField *)textField;
 - (IBAction)submitPressed:(UIBarButtonItem *)sender;

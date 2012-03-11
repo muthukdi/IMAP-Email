@@ -48,7 +48,7 @@
     self.SMTPserver.text = [entries objectAtIndex:4];
     self.SMTPport.text = [entries objectAtIndex:5];
 }
-- (IBAction)dismissKeyboardOnEnterKey:(UITextField *)sender
+- (IBAction)dismissTextFieldKeyboard:(UITextField *)sender
 {
     [sender resignFirstResponder];
 }

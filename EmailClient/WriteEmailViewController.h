@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WriteEmailViewController : UIViewController
+@interface WriteEmailViewController : UIViewController <UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *subjectField;
+@property (weak, nonatomic) IBOutlet UITextField *toField;
+@property (weak, nonatomic) IBOutlet UINavigationBar *doneButtonBar;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+- (IBAction)dismissTextFieldKeyboard:(UITextField *)sender;
+- (void)moveViewUpWhileEditing;
+- (void)moveViewDownAfterEditing;
+- (IBAction)doneButtonPressed:(UIBarButtonItem *)sender;
+- (IBAction)homeButtonPressed:(UIBarButtonItem *)sender;
 
 @end

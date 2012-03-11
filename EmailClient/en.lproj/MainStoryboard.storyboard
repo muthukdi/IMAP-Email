@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="5GD-Zo-r38"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="hN1-du-iGm"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kXW-89-Csr">
@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="up0-kc-fgn"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="g8U-yf-Uzm"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IMAP Server" lineBreakMode="tailTruncation" minimumFontSize="10" id="c9R-OI-WZH">
@@ -63,18 +63,18 @@
                                 <rect key="frame" x="103" y="151" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="rxW-eV-cN5"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="0jF-jd-9GL"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GR6-En-pCK">
                                 <rect key="frame" x="103" y="185" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="oBl-cW-BdB"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="Uyz-rj-KGt"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SMTP Server" lineBreakMode="tailTruncation" minimumFontSize="10" id="saJ-LZ-trj">
@@ -95,9 +95,9 @@
                                 <rect key="frame" x="104" y="237" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="Arq-Kg-ZoS"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="aIF-ZO-1he"/>
                                     <action selector="moveViewDownAfterEditing:" destination="2" eventType="editingDidEndOnExit" id="PBk-pk-SAZ"/>
                                     <action selector="moveViewUpWhileEditing:" destination="2" eventType="editingDidBegin" id="u56-wv-WzT"/>
                                 </connections>
@@ -106,9 +106,9 @@
                                 <rect key="frame" x="104" y="271" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="fVh-Vq-80J"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="0f1-eb-lDv"/>
                                     <action selector="moveViewDownAfterEditing:" destination="2" eventType="editingDidEndOnExit" id="L5v-Ml-9rl"/>
                                     <action selector="moveViewUpWhileEditing:" destination="2" eventType="editingDidBegin" id="t2n-AS-pXV"/>
                                 </connections>
@@ -179,16 +179,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="RtS-Zm-OVr"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="6ff-wp-Fog" eventType="editingDidEndOnExit" id="5mZ-H1-0ni"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gfV-vg-bwO">
                                 <rect key="frame" x="20" y="151" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <connections>
-                                    <action selector="dismissKeyboardOnEnterKey:" destination="2" eventType="editingDidEndOnExit" id="O9f-yp-2RQ"/>
+                                    <action selector="dismissTextFieldKeyboard:" destination="6ff-wp-Fog" eventType="editingDidEndOnExit" id="3Fk-Oi-nfQ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Body:" lineBreakMode="tailTruncation" minimumFontSize="10" id="5QF-Ln-2hH">
@@ -199,11 +199,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1QO-fq-fhM">
-                                <rect key="frame" x="20" y="219" width="280" height="221"/>
+                                <rect key="frame" x="20" y="219" width="280" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentInset" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6ff-wp-Fog" id="e6S-nY-1wb"/>
+                                </connections>
                             </textView>
                             <navigationBar contentMode="scaleToFill" id="wB5-S1-u0n">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -212,16 +216,38 @@
                                     <navigationItem title="Write Mail" id="ybH-aI-pVF">
                                         <barButtonItem key="leftBarButtonItem" title="Home" id="ryu-eF-3xD">
                                             <connections>
-                                                <segue destination="XLn-sj-nYP" kind="modal" identifier="writeToHome" modalTransitionStyle="flipHorizontal" id="kdM-rw-YfG"/>
+                                                <action selector="homeButtonPressed:" destination="6ff-wp-Fog" id="eDj-Yv-Guc"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Send" id="oWh-Cp-gkF"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <navigationBar contentMode="scaleToFill" id="NXs-jd-cXh">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <items>
+                                    <navigationItem title="Type Message" id="Ojk-Df-mI2">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="xqt-hV-emX">
+                                            <color key="tintColor" red="1" green="0.024378859249999999" blue="0.047959887120000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="doneButtonPressed:" destination="6ff-wp-Fog" id="Dcc-nb-sLy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButtonBar" destination="NXs-jd-cXh" id="VrN-m8-ojt"/>
+                        <outlet property="subjectField" destination="ld4-r9-dZY" id="ZBs-Ai-KvJ"/>
+                        <outlet property="textView" destination="1QO-fq-fhM" id="X9c-Ft-eeK"/>
+                        <outlet property="toField" destination="gfV-vg-bwO" id="h1t-Of-ODk"/>
+                        <segue destination="XLn-sj-nYP" kind="modal" identifier="writeToHome" modalTransitionStyle="flipHorizontal" id="DYn-0a-0Wy"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-296" y="60"/>
@@ -301,6 +327,42 @@
     <resources>
         <image name="LogoDogOnly.png" width="620" height="379"/>
     </resources>
+    <classes>
+        <class className="EmailClientViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmailClientViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clearPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
+                <relationship kind="action" name="moveViewDownAfterEditing:" candidateClass="UITextField"/>
+                <relationship kind="action" name="moveViewUpWhileEditing:" candidateClass="UITextField"/>
+                <relationship kind="action" name="submitPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="IMAPport" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="IMAPserver" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="SMTPport" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="SMTPserver" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="HomePageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomePageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="configPressed:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="WriteEmailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WriteEmailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
+                <relationship kind="action" name="doneButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="homeButtonPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="doneButtonBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="subjectField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="toField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

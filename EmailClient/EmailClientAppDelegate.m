@@ -17,7 +17,6 @@
 {
     //sleep(1);
     configDataExists = NO;
-    NSLog(@"%d",configDataExists);
     NSArray *entries = [self.model retrieveDataFromMemory];
     for (NSString *item in entries)
     {
@@ -25,7 +24,6 @@
             return YES;
     }
     configDataExists = YES;
-    NSLog(@"%d",configDataExists);
     return YES;
 }
 - (EmailClientModel *)model
