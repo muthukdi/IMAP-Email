@@ -18,13 +18,18 @@
 @property (weak, nonatomic) IBOutlet UITextField *IMAPport;
 @property (weak, nonatomic) IBOutlet UITextField *SMTPserver;
 @property (weak, nonatomic) IBOutlet UITextField *SMTPport;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clearOrRestoreButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *submitOrUpdateButton;
 @property (strong, nonatomic) EmailClientModel *model;
 
 - (void)populateFieldsWithData:(NSArray *)entries;
 - (IBAction)dismissTextFieldKeyboard:(UITextField *)sender;
 - (IBAction)moveViewUpWhileEditing:(UITextField *)textField;
 - (IBAction)moveViewDownAfterEditing:(UITextField *)textField;
-- (IBAction)submitPressed:(UIBarButtonItem *)sender;
-- (IBAction)clearPressed:(UIBarButtonItem *)sender;
+- (IBAction)submitOrUpdatePressed:(UIBarButtonItem *)sender;
+- (IBAction)clearOrRestorePressed:(UIBarButtonItem *)sender;
+
+/***** This method is just for debugging purposes! *****/
+- (IBAction)clearButtonPressed:(UIButton *)sender;
 
 @end

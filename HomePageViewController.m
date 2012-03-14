@@ -12,7 +12,7 @@
 
 - (IBAction)configPressed:(UIButton *)sender
 {
-    configDataExists = NO;
+    configEditMode = YES;
     [self performSegueWithIdentifier:@"homeToConfig" sender:self];
 }
 @end

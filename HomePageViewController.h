@@ -10,6 +10,7 @@
 #import "EmailClientAppDelegate.h"
 
 @interface HomePageViewController : UIViewController
+
 - (IBAction)configPressed:(UIButton *)sender;
 
 @end

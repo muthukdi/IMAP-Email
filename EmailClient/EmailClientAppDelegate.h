@@ -10,6 +10,7 @@
 #import "EmailClientModel.h"
 
 BOOL configDataExists;
+BOOL configEditMode;
 
 @interface EmailClientAppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -17,6 +17,7 @@
 {
     //sleep(1);
     configDataExists = NO;
+    configEditMode = NO;
     NSArray *entries = [self.model retrieveDataFromMemory];
     for (NSString *item in entries)
     {

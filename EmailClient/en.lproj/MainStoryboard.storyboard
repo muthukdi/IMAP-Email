@@ -14,21 +14,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" minimumFontSize="10" id="x8c-ZR-3kq">
-                                <rect key="frame" x="20" y="71" width="75" height="21"/>
+                                <rect key="frame" x="20" y="146" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" minimumFontSize="10" id="Wah-4z-ha4">
-                                <rect key="frame" x="20" y="105" width="75" height="21"/>
+                                <rect key="frame" x="20" y="180" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ZxR-fo-2QM">
-                                <rect key="frame" x="104" y="66" width="196" height="31"/>
+                                <rect key="frame" x="104" y="141" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kXW-89-Csr">
-                                <rect key="frame" x="104" y="100" width="196" height="31"/>
+                                <rect key="frame" x="104" y="175" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -46,53 +46,57 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IMAP Server" lineBreakMode="tailTruncation" minimumFontSize="10" id="c9R-OI-WZH">
-                                <rect key="frame" x="20" y="156" width="75" height="21"/>
+                                <rect key="frame" x="20" y="231" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IMAP Port" lineBreakMode="tailTruncation" minimumFontSize="10" id="N2e-dd-9aG">
-                                <rect key="frame" x="20" y="190" width="75" height="21"/>
+                                <rect key="frame" x="20" y="265" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Ik5-eI-Sd9">
-                                <rect key="frame" x="103" y="151" width="197" height="31"/>
+                                <rect key="frame" x="103" y="226" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                 <connections>
                                     <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="0jF-jd-9GL"/>
+                                    <action selector="moveViewDownAfterEditing:" destination="2" eventType="editingDidEndOnExit" id="mCf-wa-GQE"/>
+                                    <action selector="moveViewUpWhileEditing:" destination="2" eventType="editingDidBegin" id="DxU-Hw-71a"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GR6-En-pCK">
-                                <rect key="frame" x="103" y="185" width="197" height="31"/>
+                                <rect key="frame" x="103" y="260" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <connections>
                                     <action selector="dismissTextFieldKeyboard:" destination="2" eventType="editingDidEndOnExit" id="Uyz-rj-KGt"/>
+                                    <action selector="moveViewDownAfterEditing:" destination="2" eventType="editingDidEndOnExit" id="onp-7U-Ott"/>
+                                    <action selector="moveViewUpWhileEditing:" destination="2" eventType="editingDidBegin" id="dQU-HZ-YDm"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SMTP Server" lineBreakMode="tailTruncation" minimumFontSize="10" id="saJ-LZ-trj">
-                                <rect key="frame" x="20" y="242" width="79" height="21"/>
+                                <rect key="frame" x="20" y="317" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SMTP Port" lineBreakMode="tailTruncation" minimumFontSize="10" id="9xQ-WC-cVN">
-                                <rect key="frame" x="20" y="276" width="75" height="21"/>
+                                <rect key="frame" x="20" y="351" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="6wN-Zx-D41">
-                                <rect key="frame" x="104" y="237" width="196" height="31"/>
+                                <rect key="frame" x="104" y="312" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
@@ -103,7 +107,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="r4x-Nn-1pH">
-                                <rect key="frame" x="104" y="271" width="196" height="31"/>
+                                <rect key="frame" x="104" y="346" width="196" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
@@ -118,23 +122,42 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Configuration" id="Q3Q-yZ-O8n">
-                                        <barButtonItem key="leftBarButtonItem" title="Clear" id="7Wt-mt-YMw">
+                                        <barButtonItem key="leftBarButtonItem" title="Left" id="7Wt-mt-YMw">
                                             <connections>
-                                                <action selector="clearPressed:" destination="2" id="es8-Nt-xAe"/>
+                                                <action selector="clearOrRestorePressed:" destination="2" id="Ba2-FB-quf"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Submit" id="gq0-xL-LCz">
+                                        <barButtonItem key="rightBarButtonItem" title="Right" id="gq0-xL-LCz">
                                             <connections>
-                                                <action selector="submitPressed:" destination="2" id="1L1-T3-Zdb"/>
+                                                <action selector="submitOrUpdatePressed:" destination="2" id="B6E-M2-h8W"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="LogoDogOnly.png" id="gir-JA-c9W">
-                                <rect key="frame" x="72" y="345" width="177" height="95"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please provide your email configuration details here." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="10" id="rmh-56-Nd3">
+                                <rect key="frame" x="20" y="59" width="280" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rDP-jb-iSK">
+                                <rect key="frame" x="110" y="403" width="100" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear Test">
+                                    <color key="titleColor" red="1" green="0.24034977943946667" blue="0.032421229208727143" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="2" eventType="touchUpInside" id="cnD-4r-bkp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -143,7 +166,9 @@
                         <outlet property="IMAPserver" destination="Ik5-eI-Sd9" id="c72-7b-TXu"/>
                         <outlet property="SMTPport" destination="r4x-Nn-1pH" id="BLc-Sa-LQx"/>
                         <outlet property="SMTPserver" destination="6wN-Zx-D41" id="XXz-aZ-yc4"/>
+                        <outlet property="clearOrRestoreButton" destination="7Wt-mt-YMw" id="NXV-JI-r1p"/>
                         <outlet property="password" destination="kXW-89-Csr" id="y6H-QQ-5oA"/>
+                        <outlet property="submitOrUpdateButton" destination="gq0-xL-LCz" id="kJW-St-IX5"/>
                         <outlet property="userName" destination="ZxR-fo-2QM" id="HY1-3E-rmD"/>
                         <segue destination="XLn-sj-nYP" kind="modal" identifier="configToHome" modalTransitionStyle="flipHorizontal" id="oQj-nw-9Z0"/>
                     </connections>
@@ -331,16 +356,19 @@
         <class className="EmailClientViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EmailClientViewController.h"/>
             <relationships>
-                <relationship kind="action" name="clearPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="clearButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="clearOrRestorePressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
                 <relationship kind="action" name="moveViewDownAfterEditing:" candidateClass="UITextField"/>
                 <relationship kind="action" name="moveViewUpWhileEditing:" candidateClass="UITextField"/>
-                <relationship kind="action" name="submitPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="submitOrUpdatePressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="IMAPport" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="IMAPserver" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="SMTPport" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="SMTPserver" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="clearOrRestoreButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="submitOrUpdateButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
             </relationships>
         </class>
