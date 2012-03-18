@@ -244,7 +244,11 @@
                                                 <action selector="homeButtonPressed:" destination="6ff-wp-Fog" id="eDj-Yv-Guc"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Send" id="oWh-Cp-gkF"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Send" id="oWh-Cp-gkF">
+                                            <connections>
+                                                <action selector="sendButtonPressed:" destination="6ff-wp-Fog" id="ok6-JJ-ehl"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -352,51 +356,9 @@
     <resources>
         <image name="LogoDogOnly.png" width="620" height="379"/>
     </resources>
-    <classes>
-        <class className="EmailClientViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EmailClientViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="clearButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="clearOrRestorePressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
-                <relationship kind="action" name="moveViewDownAfterEditing:" candidateClass="UITextField"/>
-                <relationship kind="action" name="moveViewUpWhileEditing:" candidateClass="UITextField"/>
-                <relationship kind="action" name="submitOrUpdatePressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="IMAPport" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="IMAPserver" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="SMTPport" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="SMTPserver" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="clearOrRestoreButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="submitOrUpdateButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="HomePageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomePageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="configPressed:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="WriteEmailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WriteEmailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
-                <relationship kind="action" name="doneButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="homeButtonPressed:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="doneButtonBar" candidateClass="UINavigationBar"/>
-                <relationship kind="outlet" name="subjectField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="toField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="oQj-nw-9Z0"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -2,7 +2,10 @@
 //  EmailClientModel.h
 //  EmailClient
 //
-//  Created by PointerWare Laptop 4 on 12-02-29.
+//  This is the "model" for the application.  Its primary function is to store and manipulate data
+//  that is used by the client and manage connections to the mail server.
+//
+//  Created by Dilip Muthukrishnan on 12-02-29.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -17,6 +20,7 @@
 - (void)saveDataToMemory:(NSArray *)entries;
 - (NSArray *)retrieveDataFromMemory;
 - (void)clearDataFromMemory;
-- (BOOL)checkIfEntriesAreValid:(NSArray *)entries;
+- (int)checkIfEntriesAreValid:(NSArray *)entries;
+- (BOOL)isEmailAddressValid:(NSString *)address;
 
 @end

@@ -2,7 +2,7 @@
 //  EmailClientAppDelegate.m
 //  EmailClient
 //
-//  Created by PointerWare Laptop 4 on 12-02-28.
+//  Created by Dilip Muthukrishnan on 12-02-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,6 +13,8 @@
 @synthesize window = _window;
 @synthesize model = _model;
 
+// This method initializes the global flag variables that will help control the behavior
+// of the configuration screen when it loads each time.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //sleep(1);
@@ -27,6 +29,8 @@
     configDataExists = YES;
     return YES;
 }
+
+// This code creates a model object and returns a reference to it.
 - (EmailClientModel *)model
 {
     if (_model)

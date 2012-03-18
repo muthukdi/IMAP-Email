@@ -2,6 +2,8 @@
 //  EmailClientViewController.h
 //  EmailClient
 //
+//  This is the initial view controller for the application.  It controls the configuration screen.
+//
 //  Created by PointerWare Laptop 4 on 12-02-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
@@ -10,7 +12,7 @@
 #import "EmailClientModel.h"
 #import "EmailClientAppDelegate.h"
 
-@interface EmailClientViewController : UIViewController
+@interface EmailClientViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
