@@ -4,7 +4,7 @@
 //
 //  This is the initial view controller for the application.  It controls the configuration screen.
 //
-//  Created by PointerWare Laptop 4 on 12-02-28.
+//  Created by Dilip Muthukrishnan on 12-02-28.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -33,5 +33,9 @@
 
 /***** This method is just for debugging purposes! *****/
 - (IBAction)clearButtonPressed:(UIButton *)sender;
+
+/***** This method is just for conducting a PING test on the server *****/
+- (IBAction)pingButtonPressed:(UIButton *)sender;
+
 
 @end

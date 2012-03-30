@@ -123,6 +123,12 @@
     [self populateFieldsWithData:entries];
 }/*******************************************************/
 
+/***** This method is just for conducting a PING test on the server *****/
+- (IBAction)pingButtonPressed:(UIButton *)sender
+{
+    [self.model.validator validateServerNameUsingPing:self.IMAPserver.text];
+}/***********************************************************************/
+
 // Validate form data, display error messages (if needed), and save data to memory.
 - (IBAction)submitOrUpdatePressed:(UIBarButtonItem *)sender
 {
@@ -139,20 +145,20 @@
                     nil];
     alertBox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     // Check to see if there are any input errors and display approriate error messages.
-    int result = [self.model checkIfEntriesAreValid:fieldData];
-    if (result < 6)
+    enum error result = [self.model checkIfEntriesAreValid:fieldData];
+    if (result != NO_ERROR)
     {
-        if (result == 0)
+        if (result == EMPTY_FIELD_ERROR)
             alertBox.message = @"Some of your fields are empty!";
-        else if (result == 1)
+        else if (result == INTERNAL_WHITESPACE_ERROR)
             alertBox.message = @"Your input values cannot contain spaces!";
-        else if (result == 2)
+        else if (result == IMAP_SERVER_FORMAT_ERROR)
             alertBox.message = @"IMAP server has incorrect format!";
-        else if (result == 3)
+        else if (result == IMAP_PORT_NUMBER_ERROR)
             alertBox.message = @"IMAP port number is incorrect!";
-        else if (result == 4)
+        else if (result == SMTP_SERVER_FORMAT_ERROR)
             alertBox.message = @"SMTP server has incorrect format!";
-        else if (result == 5)
+        else if (result == SMTP_PORT_NUMBER_ERROR)
             alertBox.message = @"SMTP port number is incorrect!";
         [alertBox show];
     }
