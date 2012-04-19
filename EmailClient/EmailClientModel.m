@@ -25,6 +25,8 @@
         return _keychainItem;
     }
 }
+
+// This code creates a ValidationRoutines object and returns a reference to it.
 - (ValidationRoutines *)validator
 {
     if (_validator)

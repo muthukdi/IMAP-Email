@@ -14,6 +14,7 @@
     NSArray *fieldData;
 }
 
+@synthesize instructions = _instructions;
 @synthesize userName = _userName;
 @synthesize password = _password;
 @synthesize IMAPserver = _IMAPserver;
@@ -123,17 +124,10 @@
     [self populateFieldsWithData:entries];
 }/*******************************************************/
 
-/***** This method is just for conducting a PING test on the server *****/
-- (IBAction)pingButtonPressed:(UIButton *)sender
-{
-    [self.model.validator validateServerNameUsingPing:self.IMAPserver.text];
-}/***********************************************************************/
-
-// Validate form data, display error messages (if needed), and save data to memory.
+// Validate form data using regex and PING routines
 - (IBAction)submitOrUpdatePressed:(UIBarButtonItem *)sender
 {
-    UIAlertView *alertBox;
-    UIAlertView *confirmBox;
+    [self.submitOrUpdateButton setEnabled:NO];
     // Store user's input (after trimming leading and trailing whitespaces) inside an array
     fieldData = [[NSArray alloc] initWithObjects:
                     [self.userName.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]],
@@ -143,23 +137,41 @@
                     [self.SMTPserver.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]],
                     [self.SMTPport.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]],
                     nil];
-    alertBox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    // Check to see if there are any input errors and display approriate error messages.
-    enum error result = [self.model checkIfEntriesAreValid:fieldData];
-    if (result != NO_ERROR)
+    self.instructions.text = @"Please wait while we verify your information...";
+    self.instructions.textColor = [UIColor blueColor];
+    validationResult = [self.model checkIfEntriesAreValid:fieldData];
+    [self.model.validator validateServerNameUsingPing:self.IMAPserver.text withType:@"IMAP"];
+    [self.model.validator validateServerNameUsingPing:self.SMTPserver.text withType:@"SMTP"];
+    [self performSelector:@selector(processErrorsAndSave) withObject:nil afterDelay:1.1];
+}
+
+// Display error messages after validation (if needed), or save data to memory.
+- (void)processErrorsAndSave
+{
+    UIAlertView *alertBox;
+    UIAlertView *confirmBox;
+    [self.submitOrUpdateButton setEnabled:YES];
+    self.instructions.text = @"Please provide your email configuration details here.";
+    self.instructions.textColor = [UIColor blackColor];
+    if (validationResult != NO_ERROR)
     {
-        if (result == EMPTY_FIELD_ERROR)
+        alertBox = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        if (validationResult == EMPTY_FIELD_ERROR)
             alertBox.message = @"Some of your fields are empty!";
-        else if (result == INTERNAL_WHITESPACE_ERROR)
+        else if (validationResult == INTERNAL_WHITESPACE_ERROR)
             alertBox.message = @"Your input values cannot contain spaces!";
-        else if (result == IMAP_SERVER_FORMAT_ERROR)
+        else if (validationResult == IMAP_SERVER_FORMAT_ERROR)
             alertBox.message = @"IMAP server has incorrect format!";
-        else if (result == IMAP_PORT_NUMBER_ERROR)
+        else if (validationResult == IMAP_PORT_NUMBER_ERROR)
             alertBox.message = @"IMAP port number is incorrect!";
-        else if (result == SMTP_SERVER_FORMAT_ERROR)
+        else if (validationResult == SMTP_SERVER_FORMAT_ERROR)
             alertBox.message = @"SMTP server has incorrect format!";
-        else if (result == SMTP_PORT_NUMBER_ERROR)
+        else if (validationResult == SMTP_PORT_NUMBER_ERROR)
             alertBox.message = @"SMTP port number is incorrect!";
+        else if (validationResult == IMAP_SERVER_UNREACHABLE_ERROR)
+            alertBox.message = @"IMAP server cannot be reached!";
+        else if (validationResult == SMTP_SERVER_UNREACHABLE_ERROR)
+            alertBox.message = @"SMTP server cannot be reached!";
         [alertBox show];
     }
     else
@@ -169,7 +181,6 @@
         confirmBox = [[UIAlertView alloc] initWithTitle:@"Confirm" message:@"Are you sure you want to submit?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes",nil];
         [confirmBox show];
     }
-    
 }
 
 // This method handles events from the confirm dialog.  I had to move the saving and scene

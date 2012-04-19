@@ -14,6 +14,7 @@
 
 @interface EmailClientViewController : UIViewController <UIAlertViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *instructions;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *IMAPserver;
@@ -30,12 +31,9 @@
 - (IBAction)moveViewDownAfterEditing:(UITextField *)textField;
 - (IBAction)submitOrUpdatePressed:(UIBarButtonItem *)sender;
 - (IBAction)clearOrRestorePressed:(UIBarButtonItem *)sender;
+- (void)processErrorsAndSave;
 
 /***** This method is just for debugging purposes! *****/
 - (IBAction)clearButtonPressed:(UIButton *)sender;
-
-/***** This method is just for conducting a PING test on the server *****/
-- (IBAction)pingButtonPressed:(UIButton *)sender;
-
 
 @end

@@ -158,22 +158,6 @@
                                     <action selector="clearButtonPressed:" destination="2" eventType="touchUpInside" id="cnD-4r-bkp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nRl-Tl-jfv">
-                                <rect key="frame" x="200" y="403" width="100" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.095549857439999997" green="0.093987880499999996" blue="0.46134086279999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Ping Test">
-                                    <color key="titleColor" red="0.46172273190000002" green="0.67158739629999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pingButtonPressed:" destination="2" eventType="touchUpInside" id="TTQ-4z-a8B"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -183,6 +167,7 @@
                         <outlet property="SMTPport" destination="r4x-Nn-1pH" id="BLc-Sa-LQx"/>
                         <outlet property="SMTPserver" destination="6wN-Zx-D41" id="XXz-aZ-yc4"/>
                         <outlet property="clearOrRestoreButton" destination="7Wt-mt-YMw" id="NXV-JI-r1p"/>
+                        <outlet property="instructions" destination="rmh-56-Nd3" id="7dz-TR-dQ2"/>
                         <outlet property="password" destination="kXW-89-Csr" id="y6H-QQ-5oA"/>
                         <outlet property="submitOrUpdateButton" destination="gq0-xL-LCz" id="kJW-St-IX5"/>
                         <outlet property="userName" destination="ZxR-fo-2QM" id="HY1-3E-rmD"/>
@@ -381,13 +366,13 @@
                 <relationship kind="action" name="dismissTextFieldKeyboard:" candidateClass="UITextField"/>
                 <relationship kind="action" name="moveViewDownAfterEditing:" candidateClass="UITextField"/>
                 <relationship kind="action" name="moveViewUpWhileEditing:" candidateClass="UITextField"/>
-                <relationship kind="action" name="pingButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="submitOrUpdatePressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="IMAPport" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="IMAPserver" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="SMTPport" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="SMTPserver" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="clearOrRestoreButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="instructions" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="submitOrUpdateButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="userName" candidateClass="UITextField"/>

@@ -14,17 +14,6 @@
 #import "KeychainItemWrapper.h"
 #import "VaildationRoutines.h"
 
-// An enum type declaring a specified list of errors
-enum error {NO_ERROR,
-            EMPTY_FIELD_ERROR,
-            INTERNAL_WHITESPACE_ERROR,
-            IMAP_SERVER_FORMAT_ERROR,
-            IMAP_SERVER_UNREACHABLE_ERROR,
-            IMAP_PORT_NUMBER_ERROR,
-            SMTP_SERVER_FORMAT_ERROR,
-            SMTP_SERVER_UNREACHABLE_ERROR,
-            SMTP_PORT_NUMBER_ERROR};
-
 @interface EmailClientModel : NSObject
 
 @property (nonatomic, strong) KeychainItemWrapper *keychainItem;

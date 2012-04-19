@@ -10,6 +10,10 @@
 
 @implementation ValidationRoutines
 
+{
+    NSString *domainAddressType;
+}
+
 // This method uses an open-source regex implementation to validate email address strings.  Addresses are validated in compliance with RFC 2822 specifications.
 - (BOOL)validateEmailAddress:(NSString *)address
 {
@@ -38,33 +42,25 @@
 }
 
 // This method uses SimplePingHelper to validate a server domain string via a ping test.
-- (void)validateServerNameUsingPing:(NSString *)address
+- (void)validateServerNameUsingPing:(NSString *)address withType:(NSString *)addressType
 {
+    domainAddressType = addressType;
     [SimplePingHelper ping:address target:self sel:@selector(pingResult:)];
 }
 
 // This method is required in order to use SimplePingHelper.
 - (void)pingResult:(NSNumber *)success
 {
-    UIAlertView *alertBox = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	if (success.boolValue) {
-        alertBox.title = @"Ping Successful";
-        alertBox.message = @"IMAP server has responded!";
-        [alertBox show];
-    }
-    else
+    if (!success.boolValue)
     {
-        alertBox.title = @"Ping Failed";
-        alertBox.message = @"IMAP server cannot be reached.";
-        [alertBox show];
+        if (validationResult == NO_ERROR)
+        {
+            if ([domainAddressType isEqualToString:@"IMAP"])
+                validationResult = IMAP_SERVER_UNREACHABLE_ERROR;
+            else if ([domainAddressType isEqualToString:@"SMTP"])
+                validationResult = SMTP_SERVER_UNREACHABLE_ERROR;
+        }
     }
-}
-
-// This method uses a DHCP lookup to validate a server domain string.
-- (BOOL)validateServerNameUsingDHCP:(NSString *)address
-{
-    // Not yet implemented.
-    return YES;
 }
 
 @end
